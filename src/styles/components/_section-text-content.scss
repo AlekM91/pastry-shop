@@ -1,0 +1,41 @@
+.section-content {
+
+    .section-left {
+        display: flex;
+        flex-direction: column;
+
+        @include media-up(m) {
+            justify-content:  center;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+            font-size: 18px;
+    
+            
+            @include media-up(m) {
+                font-size: 35px;
+                margin-bottom: 44px;
+            }
+            
+            @include media-up(l) {
+                font-size: 48px;
+            }
+        }
+
+        .text-content {
+            margin-bottom: 18px;
+            font-size: 14px;
+            
+            @include media-up(m) {
+                font-size: 20px;
+                margin-bottom: 125px;
+            }
+
+            @include media-up(xl) {
+                font-size: 36px;
+            }
+            
+        }
+    }
+}

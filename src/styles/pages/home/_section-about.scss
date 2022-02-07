@@ -1,0 +1,19 @@
+#about {
+
+    .section-right {
+        background: url('/src/assets/images/about-mobile.png');
+        background-position: center;
+        background-size: cover;
+        
+        @include media-up(m) {
+            background: url('/src/assets/images/about.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .button {
+        text-align: center;
+    }
+}

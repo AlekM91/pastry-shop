@@ -1,0 +1,14 @@
+.button {
+    font-size: 12px;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+    background: $primary;
+    color: $white;
+    cursor: pointer;
+    
+    @include media-up(l) {
+        font-size: 22px;
+        padding: 20px 40px;
+    }
+}

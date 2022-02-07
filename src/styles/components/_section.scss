@@ -1,0 +1,42 @@
+.section {
+    margin-top: 45px;
+
+    @include media-up(m) {
+        display: flex;
+        margin-bottom: 125px;
+    }
+
+    .section-left {
+        margin-bottom: 25px;
+
+        @include media-up(m) {
+            flex-basis: 100%;
+            margin-bottom: 0;
+
+            .inner {
+                padding-right: 50px;
+            }
+        }
+    }
+
+    .section-right {
+
+        @include media-up(m) {
+            flex-basis: 100%;
+        }
+
+        .section-gallery {
+            position: relative;
+            height: 285px;
+
+            @include media-up(xs) {
+                height: 360px;
+            }
+
+            @include media-up(m) {
+                height: 100%;
+            }
+        }
+
+    }
+}

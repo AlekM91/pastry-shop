@@ -1,0 +1,96 @@
+// Main navigation
+.main-nav {
+
+    @include media-down(s) {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.74);
+            border-radius: 0px 0px 10px 10px;
+            width: 100%;
+            height: 183px;
+            z-index: 1;
+            opacity: 0;
+            transition: .2s;
+        }
+
+        &-active {
+            
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    
+    .main-menu {
+        display: flex;
+        
+
+        @include media-down(s) {
+            position: relative;
+            z-index: 5;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 20px;
+            display: none;
+            // opacity: 0;
+            // transition: .5s;
+
+            &-active {
+                display: flex;
+                // opacity: 1;
+
+                li {
+                    animation: fadeIn linear .2s forwards;
+
+                    &:first-child {
+                        animation-delay: 100ms;
+                    }
+
+                    &:nth-child(2) {
+                        animation-delay: 200ms;
+                    }
+
+                    &:last-child {
+                        animation-delay: 300ms;
+                    }
+                }
+            }
+        }
+
+        li {
+            @include media-down(s) {
+                opacity: 0;
+            }
+            
+
+            a {
+                display: inline-block;
+                margin-right: 10px;
+                text-align: center;
+                border: 1px solid transparent;
+                font-size: 21px;
+               
+                &:hover {
+                    border-bottom-color: $primary;
+                }
+
+                @include media-down(s) {
+                    font-size: 11px;
+                    margin-right: 0;
+                    margin-bottom: 6px;
+                }
+            }
+
+        }
+    }
+    
+}
+
+
+

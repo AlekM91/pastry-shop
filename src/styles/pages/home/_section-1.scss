@@ -1,0 +1,31 @@
+.section-1 {
+    width: 100%;
+    height: 100vh;
+    background-image:
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    url('/src/assets/images/backgound-mobile.png');
+    background-position: center;
+    background-size: cover;
+
+    @include media-up(m) {
+        background-image:
+        linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+        url('/src/assets/images/background.png');
+    }
+
+    h1 {
+        font-size: 36px;
+        color: $white;
+        text-align: center;
+        padding-top: 360px;
+
+        @include media-up(s) {
+            font-size: 48px;
+        }
+        @include media-up(m) {
+            font-size: 100px;
+            text-transform: uppercase;
+        }
+    }
+}
+

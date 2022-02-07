@@ -1,0 +1,45 @@
+.product-images {
+    position: relative;
+    // width: 269px;
+    height: 284px;
+    width: 100%;
+
+    .img {
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+
+        &:first-child {
+            width: 37.5308%;
+            height: 54.827586%;
+            top: 0;
+            left: 0;
+        }
+
+        &:nth-child(2) {
+            width: 59.87654%;
+            height: 37.01140425%;
+            top: 0;
+            right: 0;
+        }
+
+        &:nth-child(3) {
+            width: 57.407407%;
+            height: 42.29885%;
+            bottom: 0;
+            left: 0;
+        }
+
+        &:last-child {
+            width: 39.8765432%;
+            height: 60.574712%;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @include media-up(l) {
+        width: 50%;
+        height: inherit;
+    }
+}

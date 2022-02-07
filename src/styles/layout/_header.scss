@@ -1,0 +1,94 @@
+// Header
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  padding-top: 15px;
+
+  @include media-down(s) {
+    flex-direction: column;
+    align-items: stretch;
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 5;
+    }
+  }
+ 
+  @include media-up(m) {
+    padding-top: 34px;
+  }
+
+ 
+
+  .site-logo {
+    display: flex;
+    align-items:  center;
+
+    @include media-down(s) {
+      .star {
+        width: 25px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-size: 24px;
+      margin-left: 7px;
+      line-height: 36px;
+
+      @include media-down(s) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .hamburger {
+    width: 19px;
+    height: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    display: none;
+
+    @include media-down(s) {
+      display: flex;
+    }
+
+    div {
+      background: $primary;
+      height: 2px;
+      width: 100%;
+      border-radius: 1px;
+      transition: .2s;
+    }
+
+
+    &-active {
+      div {
+
+        &:first-child {
+          transform: rotate(45deg) translate(4px, 3px);
+        }
+
+        &:nth-child(2) {
+          width: 0;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg) translate(2px, -2px);
+        }
+      }
+    }
+  }
+}
+
