@@ -6,9 +6,34 @@
     background: $primary;
     color: $white;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;   
+    border: 1px solid transparent;
+    z-index: 1;
     
     @include media-up(l) {
         font-size: 22px;
         padding: 20px 40px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 100%;
+        z-index: -1;
+        background: $white;
+        transition: .2s;
+    }
+
+    &:hover {
+        border-color: $primary;
+        color: $primary;
+
+        &::after {
+            left: 10%;
+        }
     }
 }

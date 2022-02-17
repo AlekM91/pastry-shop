@@ -15,3 +15,21 @@
     }
 }
 
+@keyframes hamburger-down {
+    50% {
+        transform:translate(0px, 4px);
+    }
+    100% {
+        transform: rotate(45deg) translate(4px, 3px);
+    }
+}
+
+@keyframes hamburger-up {
+    50% {
+        transform:translate(0px, -4px);
+    }
+    100% {
+        transform: rotate(-45deg) translate(2px, -2px);
+    }
+}
+

@@ -27,8 +27,6 @@
     padding-top: 34px;
   }
 
- 
-
   .site-logo {
     display: flex;
     align-items:  center;
@@ -41,12 +39,16 @@
 
     span {
       display: inline-block;
-      font-size: 24px;
+      font-size: 21px;
       margin-left: 7px;
       line-height: 36px;
 
       @include media-down(s) {
         font-size: 14px;
+      }
+
+      @include media-up(m) {
+        font-size: 24px;
       }
     }
   }
@@ -69,15 +71,14 @@
       height: 2px;
       width: 100%;
       border-radius: 1px;
-      transition: .2s;
+      transition: .3s;
     }
-
-
+    
     &-active {
       div {
 
         &:first-child {
-          transform: rotate(45deg) translate(4px, 3px);
+          animation: hamburger-down .3s ease forwards;
         }
 
         &:nth-child(2) {
@@ -85,7 +86,7 @@
         }
 
         &:last-child {
-          transform: rotate(-45deg) translate(2px, -2px);
+          animation: hamburger-up .3s ease forwards;
         }
       }
     }

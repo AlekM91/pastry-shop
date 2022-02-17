@@ -1,0 +1,8 @@
+.sticky-section {
+    // Might be fun to play around with
+    @include media-up(l) {
+        position: sticky;
+        top: 0;
+        background: $white;
+    }
+}
